@@ -439,10 +439,10 @@ textarea.f:focus,input.f:focus{border-color:var(--accent);}
     <div class="login-tagline">gestão que não depende de você</div>
     <div style="margin-top:28px;display:flex;flex-direction:column;gap:10px;width:100%;">
       <button class="login-btn" style="margin-top:0;justify-content:center;" onclick="showStep('step-owner-reg')">
-        <span>👩‍💼</span> Sou dona / gestora
+        <span>👩‍💼</span> Sou Gestor
       </button>
       <button class="login-btn" style="margin-top:0;background:var(--surface);color:var(--ink);border:1.5px solid var(--border);justify-content:center;" onclick="showStep('step-emp-access')">
-        <span>🛍️</span> Sou colaboradora
+        <span>🛍️</span> Sou do time
       </button>
     </div>
     <div style="margin-top:20px;text-align:center;width:100%;">
@@ -1142,253 +1142,42 @@ textarea.f:focus,input.f:focus{border-color:var(--accent);}
   <!-- INCIDENTS (owner only) -->
   <div class="screen" id="s-incidents">
     <div class="culture-hero">
-      <h2>Relatório de<br><em>incidentes</em></h2>
-      <p>Cada conversa da equipe com o assistente — revise e corrija onde ele errou.</p>
+      <h2>Pedidos de<br><em>orientação</em></h2>
+      <p>A equipe só te chama quando realmente precisa. As conversas com o assistente são privadas delas.</p>
     </div>
     <div class="culture-body" style="padding-top:34px;">
+
+      <div style="background:rgba(0,122,255,.06);border:1px solid rgba(0,122,255,.15);border-radius:12px;padding:12px 14px;margin-bottom:16px;">
+        <div style="font-size:11px;color:var(--accent2);font-weight:500;margin-bottom:4px;">COMO FUNCIONA</div>
+        <div style="font-size:12px;color:var(--ink2);line-height:1.55;">A equipe consulta o assistente livremente — você não vê essas conversas. Quando ficam com dúvida mesmo após consultar, elas te marcam aqui. Você responde e o assistente aprende.</div>
+      </div>
 
       <!-- Summary KPIs -->
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:16px;">
         <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 8px;text-align:center;">
-          <div style="font-family:'Fraunces',serif;font-weight:300;font-size:26px;color:var(--ink);" id="inc-total">3</div>
-          <div style="font-size:10px;color:var(--muted);margin-top:3px;line-height:1.3;">total de<br>incidentes</div>
+          <div style="font-family:'Fraunces',serif;font-weight:300;font-size:26px;color:var(--ink);" id="inc-total">0</div>
+          <div style="font-size:10px;color:var(--muted);margin-top:3px;line-height:1.3;">pedidos<br>recebidos</div>
         </div>
         <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 8px;text-align:center;">
-          <div style="font-family:'Fraunces',serif;font-weight:300;font-size:26px;color:var(--accent3);" id="inc-resolved">1</div>
-          <div style="font-size:10px;color:var(--muted);margin-top:3px;line-height:1.3;">confiança<br>acima de 70%</div>
+          <div style="font-family:'Fraunces',serif;font-weight:300;font-size:26px;color:var(--accent3);" id="inc-resolved">0</div>
+          <div style="font-size:10px;color:var(--muted);margin-top:3px;line-height:1.3;">já<br>respondidos</div>
         </div>
         <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 8px;text-align:center;">
-          <div style="font-family:'Fraunces',serif;font-weight:300;font-size:26px;color:var(--accent);" id="inc-unresolved">2</div>
-          <div style="font-size:10px;color:var(--muted);margin-top:3px;line-height:1.3;">abaixo de 70%<br>ou pendentes</div>
+          <div style="font-family:'Fraunces',serif;font-weight:300;font-size:26px;color:var(--accent);" id="inc-unresolved">0</div>
+          <div style="font-size:10px;color:var(--muted);margin-top:3px;line-height:1.3;">aguardando<br>sua resposta</div>
         </div>
       </div>
 
-      <div class="sec-lbl" style="margin-top:0;">Esta semana · <span id="inc-count-lbl">3 conversas</span></div>
-
-      <!-- Issue analysis cards -->
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:13px;margin-bottom:7px;">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
-          <div style="width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0;"></div>
-          <div style="font-size:12px;font-weight:600;color:var(--ink);">A equipe improvisa por falta de POP, não por má intenção</div>
-        </div>
-        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:8px;">2 dos 3 incidentes envolveram equipe agindo sem protocolo claro — garantia e desconto VIP. Evidência: "mandaram a pulseira fora da garantia e a peça se perdeu" (Lu). A causa raiz é ausência de processo, não falta de esforço. O assistente foi consultado antes de agir — sinal positivo de que o canal está funcionando.</div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;">
-          <span style="font-size:10px;font-weight:600;padding:2px 8px;border-radius:20px;background:rgba(255,107,53,.1);color:var(--accent);">Protocolo ausente</span>
-          <span style="font-size:10px;font-weight:500;padding:2px 8px;border-radius:20px;background:var(--bg);color:var(--muted);">Ana · 2 consultas</span>
-          <span style="font-size:10px;font-weight:500;padding:2px 8px;border-radius:20px;background:var(--bg);color:var(--muted);">Recorrente: garantia</span>
-        </div>
-        <div style="margin-top:10px;padding:9px 11px;background:rgba(52,199,89,.06);border-radius:8px;border-left:2px solid var(--accent3);font-size:11px;color:var(--ink2);line-height:1.5;">
-          <strong>Ação sugerida:</strong> Adicione um POP de garantia em Minha Mente — quais casos a equipe pode resolver sozinha e quais escalam para você.
-        </div>
-        <div style="margin-top:8px;" id="ac-anal1">
-          <button onclick="toggleAnalysisFeedback('anal1')" style="font-size:11px;color:var(--muted);background:none;border:none;cursor:pointer;padding:0;font-family:-apple-system,sans-serif;">A análise está errada? Deixar feedback →</button>
-          <div id="af-anal1" style="display:none;margin-top:8px;background:var(--bg);border-radius:10px;padding:10px;">
-            <div style="font-size:11px;color:var(--muted);margin-bottom:6px;line-height:1.4;">O que você observa que contradiz esta análise? Quanto mais contexto, melhor.</div>
-            <div style="display:flex;gap:7px;align-items:flex-end;">
-              <textarea id="aft-anal1" class="f" rows="2" placeholder="Ex: já existe um POP de garantia físico na loja, a equipe conhece as regras mas ainda assim não aplica..." style="margin-bottom:0;font-size:12px;"></textarea>
-              <button class="mic-btn" id="afm-anal1" onclick="toggleMic('afm-anal1','afa-anal1')"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8"/></svg></button>
-            </div>
-            <div class="audio-pill" id="afa-anal1" style="display:none;"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg><span>Áudio gravado</span><span class="rm" onclick="this.closest('.audio-pill').style.display='none'">✕</span></div>
-            <button onclick="submitAnalysisFeedback('anal1')" style="margin-top:7px;width:100%;padding:9px;border-radius:8px;background:var(--accent);color:#fff;font-size:12px;font-weight:600;border:none;cursor:pointer;font-family:-apple-system,sans-serif;">Enviar feedback</button>
-          </div>
-        </div>
+      <div class="sec-lbl">Pedidos da equipe</div>
+      <div id="owner-flagged-feed">
+        <div style="font-size:13px;color:var(--muted);padding:12px 0;">Nenhum pedido ainda — quando a equipe precisar de você, aparece aqui.</div>
       </div>
 
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:13px;margin-bottom:16px;">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
-          <div style="width:8px;height:8px;border-radius:50%;background:var(--accent-amber);flex-shrink:0;"></div>
-          <div style="font-size:12px;font-weight:600;color:var(--ink);">Cultura não é absorvida via treinamento — precisa de respaldo em tempo real</div>
-        </div>
-        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:8px;">Evidência direta: "O que mais me desgasta é falar, explicar, fazer reunião… e mesmo assim elas não absorverem" (Léia). A equipe recebe treinamento mas ainda segura a regra com medo — e quando segura sem respaldo, é vista como "grossa" pela cliente. O assistente está preenchendo o gap que o treinamento não preenche.</div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;">
-          <span style="font-size:10px;font-weight:600;padding:2px 8px;border-radius:20px;background:rgba(255,149,0,.1);color:var(--accent-amber);">Cultura informal</span>
-          <span style="font-size:10px;font-weight:500;padding:2px 8px;border-radius:20px;background:var(--bg);color:var(--muted);">Medo de errar</span>
-          <span style="font-size:10px;font-weight:500;padding:2px 8px;border-radius:20px;background:var(--bg);color:var(--muted);">Confiança 41% em VIP</span>
-        </div>
-        <div style="margin-top:10px;padding:9px 11px;background:rgba(255,149,0,.06);border-radius:8px;border-left:2px solid var(--accent-amber);font-size:11px;color:var(--ink2);line-height:1.5;">
-          <strong>Ação sugerida:</strong> Responda as perguntas de Liderança & comportamento em Minha Mente — especialmente como você quer que a equipe se comporte quando erra.
-        </div>
-        <div style="margin-top:8px;" id="ac-anal2">
-          <button onclick="toggleAnalysisFeedback('anal2')" style="font-size:11px;color:var(--muted);background:none;border:none;cursor:pointer;padding:0;font-family:-apple-system,sans-serif;">A análise está errada? Deixar feedback →</button>
-          <div id="af-anal2" style="display:none;margin-top:8px;background:var(--bg);border-radius:10px;padding:10px;">
-            <div style="font-size:11px;color:var(--muted);margin-bottom:6px;line-height:1.4;">O que você observa que contradiz esta análise? Quanto mais contexto, melhor.</div>
-            <div style="display:flex;gap:7px;align-items:flex-end;">
-              <textarea id="aft-anal2" class="f" rows="2" placeholder="Ex: a equipe já absorveu a cultura — o problema é que as situações de VIP são muito específicas e dependem de quem é a cliente..." style="margin-bottom:0;font-size:12px;"></textarea>
-              <button class="mic-btn" id="afm-anal2" onclick="toggleMic('afm-anal2','afa-anal2')"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8"/></svg></button>
-            </div>
-            <div class="audio-pill" id="afa-anal2" style="display:none;"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg><span>Áudio gravado</span><span class="rm" onclick="this.closest('.audio-pill').style.display='none'">✕</span></div>
-            <button onclick="submitAnalysisFeedback('anal2')" style="margin-top:7px;width:100%;padding:9px;border-radius:8px;background:var(--accent);color:#fff;font-size:12px;font-weight:600;border:none;cursor:pointer;font-family:-apple-system,sans-serif;">Enviar feedback</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Inc 1 -->
-      <div class="inc-card" id="inc1">
-        <div class="inc-head" onclick="toggleInc('inc1')">
-          <div class="inc-av">A</div>
-          <div class="inc-info">
-            <div class="inc-title">Ana · Troca fora do prazo</div>
-            <div class="inc-meta-row">Hoje, 10h32 · <span class="tag-sm tag-pend" id="inc1-tag">Pendente revisão</span></div>
-          </div>
-          <div class="chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
-        </div>
-        <div class="inc-body">
-          <div style="margin-top:10px;">
-            <div class="cl-msg"><div class="cl-role emp">Ana</div><div class="cl-bubble">Uma cliente pedindo troca de um brinco com 4 meses de uso. A pedra caiu sozinha. O que eu faço?</div></div>
-            <div class="cl-msg" style="margin-top:7px;"><div class="cl-role bot">Assistente</div><div class="cl-bubble">Essa situação está fora do prazo de garantia (30 dias). <strong>Não faça a troca agora.</strong> Diga que vai verificar e retorna em até 2 horas. Nunca prometa exceção na hora — é decisão da gestora.</div></div>
-          </div>
-          <div class="conf-wrap" id="conf-inc1"></div>
-          <div class="flag-area" id="inc1-flag-area">
-            <div class="flag-q">A resposta estava alinhada com sua cultura?</div>
-            <div class="flag-btns">
-              <button class="fb-ok" onclick="markOk('inc1')">✓ Sim, está certo</button>
-              <button class="fb-fix" onclick="showFix('inc1-fix')">✗ Precisa corrigir</button>
-            </div>
-            <div id="inc1-fix" style="display:none;">
-              <div class="flag-input-row">
-                <textarea class="f" id="inc1-comment" placeholder="Como deveria ter respondido?"></textarea>
-                <button class="mic-btn" id="mic-inc1" onclick="toggleMic('mic-inc1','audio-inc1')"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8"/></svg></button>
-              </div>
-              <div class="audio-pill" id="audio-inc1" style="display:none;"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg><span>Áudio gravado · 0:12</span><span class="rm" onclick="this.closest('.audio-pill').style.display='none'">✕</span></div>
-              <button class="btn-p" style="margin-top:8px;" onclick="sendFix('inc1')">Enviar correção</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Inc 2 -->
-      <div class="inc-card" id="inc2">
-        <div class="inc-head" onclick="toggleInc('inc2')">
-          <div class="inc-av">C</div>
-          <div class="inc-info">
-            <div class="inc-title">Carol · Cliente nervosa na loja</div>
-            <div class="inc-meta-row">Ontem, 14h18 · <span class="tag-sm tag-ok">Alinhado ✓</span></div>
-          </div>
-          <div class="chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
-        </div>
-        <div class="inc-body">
-          <div style="margin-top:10px;">
-            <div class="cl-msg"><div class="cl-role emp">Carol</div><div class="cl-bubble">Tem uma cliente falando alto, reclamando que a pulseira quebrou na primeira semana. Está constrangendo as outras clientes.</div></div>
-            <div class="cl-msg" style="margin-top:7px;"><div class="cl-role bot">Assistente</div><div class="cl-bubble">Não eleve o tom. Voz calma, postura aberta. Convide para conversa em particular: <em>"Vamos resolver isso aqui."</em> Pulseira quebrada na primeira semana é garantia — pode registrar para reposição.</div></div>
-          </div>
-          <div class="conf-wrap" id="conf-inc2"></div>
-          <div class="flag-area"><div class="ok-banner">Você marcou como alinhado com sua cultura.</div></div>
-        </div>
-      </div>
-
-      <!-- Inc 3 — low confidence -->
-      <div class="inc-card" id="inc3">
-        <div class="inc-head" onclick="toggleInc('inc3')">
-          <div class="inc-av">A</div>
-          <div class="inc-info">
-            <div class="inc-title">Ana · Pedido de desconto VIP</div>
-            <div class="inc-meta-row">Seg, 11h05 · <span class="tag-sm tag-pend" id="inc3-tag">Pendente revisão</span></div>
-          </div>
-          <div class="chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
-        </div>
-        <div class="inc-body">
-          <div style="margin-top:10px;">
-            <div class="cl-msg"><div class="cl-role emp">Ana</div><div class="cl-bubble">A Sra. Marcia — cliente que compra todo mês — pediu 10% de desconto numa peça de R$480. Posso dar?</div></div>
-            <div class="cl-msg" style="margin-top:7px;"><div class="cl-role bot">Assistente</div><div class="cl-bubble">Não tenho certeza da política para clientes VIP. O mais seguro é dizer que vai verificar e retornar. Evite dar desconto sem confirmar com a gestora.</div></div>
-          </div>
-          <div class="conf-wrap" id="conf-inc3"></div>
-          <div class="flag-area" id="inc3-flag-area">
-            <div class="flag-q">Como deveria ter respondido neste caso?</div>
-            <div class="flag-btns">
-              <button class="fb-ok" onclick="markOk('inc3')">✓ Estava certo</button>
-              <button class="fb-fix" onclick="showFix('inc3-fix')">✗ Corrigir</button>
-            </div>
-            <div id="inc3-fix" style="display:none;">
-              <div class="flag-input-row">
-                <textarea class="f" id="inc3-comment" placeholder="Ex: para a Sra. Marcia pode oferecer 5% ou um brinde — ela é nossa cliente mais fiel..."></textarea>
-                <button class="mic-btn" id="mic-inc3" onclick="toggleMic('mic-inc3','audio-inc3')"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8"/></svg></button>
-              </div>
-              <div class="audio-pill" id="audio-inc3" style="display:none;"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg><span>Áudio gravado · 0:15</span><span class="rm" onclick="this.closest('.audio-pill').style.display='none'">✕</span></div>
-              <button class="btn-p" style="margin-top:8px;" onclick="sendFix('inc3')">Enviar correção</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- CONFIDENCE LEGEND -->
-      <div style="margin-top:8px;margin-bottom:4px;">
-        <button onclick="toggleConfLegend()" style="width:100%;display:flex;align-items:center;justify-content:space-between;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:13px 14px;cursor:pointer;font-family:-apple-system,sans-serif;">
-          <div style="display:flex;align-items:center;gap:9px;">
-            <div style="display:flex;gap:3px;">
-              <div style="width:8px;height:8px;border-radius:50%;background:#FF3B30;"></div>
-              <div style="width:8px;height:8px;border-radius:50%;background:#FF9500;"></div>
-              <div style="width:8px;height:8px;border-radius:50%;background:#FFD60A;"></div>
-              <div style="width:8px;height:8px;border-radius:50%;background:#34C759;"></div>
-              <div style="width:8px;height:8px;border-radius:50%;background:#007AFF;"></div>
-            </div>
-            <span style="font-size:13px;font-weight:500;color:var(--ink);">O que significam os % de confiança?</span>
-          </div>
-          <svg id="conf-legend-chev" viewBox="0 0 24 24" style="width:16px;height:16px;stroke:var(--muted);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s;"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-
-        <div id="conf-legend-body" style="display:none;margin-top:4px;">
-
-          <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:6px;border-left:4px solid #FF3B30;">
-            <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;">
-              <span style="font-size:14px;font-weight:700;color:#FF3B30;">0 – 30%</span>
-              <span style="font-size:13px;font-weight:500;color:var(--ink);">Sem base — não responder</span>
-            </div>
-            <div style="height:4px;background:var(--sep);border-radius:99px;margin-bottom:10px;"><div style="width:30%;height:100%;background:#FF3B30;border-radius:99px;"></div></div>
-            <div style="font-size:12px;color:var(--muted);margin-bottom:8px;line-height:1.5;">O assistente não encontrou nada na base de conhecimento da dona. Resposta seria invenção.</div>
-            <div style="font-size:12px;color:var(--ink2);background:rgba(255,59,48,.06);border:1px solid rgba(255,59,48,.15);border-radius:8px;padding:8px 10px;line-height:1.5;margin-bottom:6px;">Esse tema não foi documentado em Minha Mente. A equipe vai escalar para você — e está certa em fazer isso.</div>
-            <div style="font-size:11px;color:var(--muted);font-style:italic;line-height:1.4;">Ex: política de desconto VIP sem nenhuma resposta salva → assistente não deve arriscar</div>
-          </div>
-
-          <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:6px;border-left:4px solid #FF9500;">
-            <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;">
-              <span style="font-size:14px;font-weight:700;color:#FF9500;">31 – 55%</span>
-              <span style="font-size:13px;font-weight:500;color:var(--ink);">Inseguro — orienta com cautela</span>
-            </div>
-            <div style="height:4px;background:var(--sep);border-radius:99px;margin-bottom:10px;"><div style="width:55%;height:100%;background:#FF9500;border-radius:99px;"></div></div>
-            <div style="font-size:12px;color:var(--muted);margin-bottom:8px;line-height:1.5;">Tem alguma base, mas incompleta ou ambígua. Resposta é parcialmente fundamentada.</div>
-            <div style="font-size:12px;color:var(--ink2);background:rgba(255,149,0,.06);border:1px solid rgba(255,149,0,.15);border-radius:8px;padding:8px 10px;line-height:1.5;margin-bottom:6px;">Revise o incidente e adicione mais contexto em Minha Mente. A orientação dada pode ter sido genérica demais para a situação.</div>
-            <div style="font-size:11px;color:var(--muted);font-style:italic;line-height:1.4;">Ex: garantia de peça com defeito de fabricação — regra parcialmente respondida mas sem critério claro de exceção</div>
-          </div>
-
-          <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:6px;border-left:4px solid #C4A000;">
-            <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;">
-              <span style="font-size:14px;font-weight:700;color:#C4A000;">56 – 74%</span>
-              <span style="font-size:13px;font-weight:500;color:var(--ink);">Razoável — validar se situação foi incomum</span>
-            </div>
-            <div style="height:4px;background:var(--sep);border-radius:99px;margin-bottom:10px;"><div style="width:74%;height:100%;background:#FFD60A;border-radius:99px;"></div></div>
-            <div style="font-size:12px;color:var(--muted);margin-bottom:8px;line-height:1.5;">Base sólida para o tema geral, mas faltam nuances ou casos específicos.</div>
-            <div style="font-size:12px;color:var(--ink2);background:rgba(255,214,10,.06);border:1px solid rgba(196,160,0,.2);border-radius:8px;padding:8px 10px;line-height:1.5;margin-bottom:6px;">Orientação alinhada com a regra geral. Só revise se a situação foi incomum ou envolveu cliente especial.</div>
-            <div style="font-size:11px;color:var(--muted);font-style:italic;line-height:1.4;">Ex: cliente pedindo troca normal dentro do prazo — regra clara, mas tom pode variar por cliente</div>
-          </div>
-
-          <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:6px;border-left:4px solid #34C759;">
-            <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;">
-              <span style="font-size:14px;font-weight:700;color:#34C759;">75 – 89%</span>
-              <span style="font-size:13px;font-weight:500;color:var(--ink);">Confiante — equipe pode agir sem consultar</span>
-            </div>
-            <div style="height:4px;background:var(--sep);border-radius:99px;margin-bottom:10px;"><div style="width:89%;height:100%;background:#34C759;border-radius:99px;"></div></div>
-            <div style="font-size:12px;color:var(--muted);margin-bottom:8px;line-height:1.5;">Base bem documentada. Resposta alinhada com a cultura e processo da loja.</div>
-            <div style="font-size:12px;color:var(--ink2);background:rgba(52,199,89,.06);border:1px solid rgba(52,199,89,.18);border-radius:8px;padding:8px 10px;line-height:1.5;margin-bottom:6px;">A equipe pode agir com base nessa orientação sem te consultar. Você só precisa revisar se quiser confirmar.</div>
-            <div style="font-size:11px;color:var(--muted);font-style:italic;line-height:1.4;">Ex: cliente nervosa — cultura de atendimento bem calibrada com múltiplas respostas salvas</div>
-          </div>
-
-          <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:6px;border-left:4px solid #007AFF;">
-            <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;">
-              <span style="font-size:14px;font-weight:700;color:#007AFF;">90 – 100%</span>
-              <span style="font-size:13px;font-weight:500;color:var(--ink);">Plena confiança — autônomo</span>
-            </div>
-            <div style="height:4px;background:var(--sep);border-radius:99px;margin-bottom:10px;"><div style="width:100%;height:100%;background:#007AFF;border-radius:99px;"></div></div>
-            <div style="font-size:12px;color:var(--muted);margin-bottom:8px;line-height:1.5;">Tema totalmente calibrado. Assistente age como a dona agiria.</div>
-            <div style="font-size:12px;color:var(--ink2);background:rgba(0,122,255,.06);border:1px solid rgba(0,122,255,.18);border-radius:8px;padding:8px 10px;line-height:1.5;margin-bottom:6px;">Não precisa revisar. A equipe está sendo orientada exatamente como você orientaria. Seu tempo é liberado.</div>
-            <div style="font-size:11px;color:var(--muted);font-style:italic;line-height:1.4;">Ex: regra de bastidores — respondida, exemplificada e confirmada pela dona múltiplas vezes</div>
-          </div>
-
-        </div>
-      </div>
     </div>
   </div>
 
-  <!-- ══ CONSULTA DE ALINHAMENTO ══ -->
+
+    <!-- ══ CONSULTA DE ALINHAMENTO ══ -->
   <div class="screen" id="s-consult">
     <div class="culture-hero">
       <h2>Consulta de<br><em>alinhamento</em></h2>
@@ -1658,7 +1447,34 @@ textarea.f:focus,input.f:focus{border-color:var(--accent);}
     </div>
   </div>
 
+  <!-- EMP REPORT (employee only — private incident log) -->
+  <div class="screen" id="s-emp-report">
+    <div class="culture-hero">
+      <h2>Meu<br><em>relatório</em></h2>
+      <p>Suas consultas ao assistente são privadas. Só você decide o que compartilhar com a gestora.</p>
+    </div>
+    <div class="culture-body" style="padding-top:34px;">
+
+      <div style="background:rgba(0,122,255,.06);border:1px solid rgba(0,122,255,.15);border-radius:12px;padding:12px 14px;margin-bottom:16px;">
+        <div style="font-size:11px;color:var(--accent2);font-weight:500;margin-bottom:4px;">COMO FUNCIONA</div>
+        <div style="font-size:12px;color:var(--ink2);line-height:1.55;">A gestora <strong>não vê</strong> suas conversas com o assistente. Só vê os itens que você marcar como <strong>"Preciso da gestora"</strong> — você está no controle.</div>
+      </div>
+
+      <div class="sec-lbl">Suas consultas desta semana</div>
+      <div id="emp-report-list" style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px;">
+        <div style="font-size:13px;color:var(--muted);padding:8px 0;">Nenhuma consulta ainda. Use o Assistente e avalie a resposta aqui.</div>
+      </div>
+
+      <div class="sec-lbl">Itens enviados para a gestora</div>
+      <div id="emp-flagged-list" style="display:flex;flex-direction:column;gap:8px;">
+        <div style="font-size:13px;color:var(--muted);padding:8px 0;">Nenhum item enviado ainda.</div>
+      </div>
+
+    </div>
+  </div>
+
   <!-- TASKS -->
+
   <div class="screen" id="s-tasks">
     <div class="tasks-body">
       <div class="tasks-header">
@@ -1895,8 +1711,9 @@ function enterApp(){
       {icon:'<svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>',label:'Assistente',id:'chat'},
       {icon:'<svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>',label:'Tarefas',id:'tasks'},
       {icon:'<svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>',label:'Procedimentos',id:'guides'},
+      {icon:'<svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>',label:'Relatório',id:'emp-report'},
     ]);
-    document.getElementById('main-nav').className='nav n3';
+    document.getElementById('main-nav').className='nav n4';
     document.getElementById('owner-task-filters').style.display='none';
     document.getElementById('owner-perf').style.display='none';
     document.getElementById('add-task-btn').style.display='none';
@@ -3012,6 +2829,83 @@ Responda de forma curta (máximo 5 linhas), prática e no tom de ${st.owner}.
 Ao final, pergunte se quer registrar o incidente ou se já resolveu.`;
 }
 
+// ── EMPLOYEE REPORT SYSTEM ─────────────────────────────────────
+let EMP_REPORT = []; // {id, question, answer, conf, flagged, ownerNote}
+
+function renderEmpReport(){
+  const list = document.getElementById('emp-report-list');
+  const flagged = document.getElementById('emp-flagged-list');
+  if(!list) return;
+
+  const mine = EMP_REPORT;
+  const unflagged = mine.filter(x=>!x.flagged);
+  const fl = mine.filter(x=>x.flagged);
+
+  list.innerHTML = unflagged.length ? unflagged.map(r=>`
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:12px 14px;">
+      <div style="font-size:12px;font-weight:500;color:var(--ink);margin-bottom:4px;">${r.question}</div>
+      <div style="font-size:11px;color:var(--muted);margin-bottom:8px;line-height:1.5;">${r.answer.substring(0,100)}${r.answer.length>100?'…':''}</div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span style="font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:${r.conf==='ok'?'rgba(52,199,89,.1)':r.conf==='unsure'?'rgba(255,149,0,.1)':'rgba(255,59,48,.1)'};color:${r.conf==='ok'?'#34C759':r.conf==='unsure'?'#FF9500':'#FF3B30'};">
+          ${r.conf==='ok'?'✓ Resolveu':'⚠ Ficou com dúvida'}
+        </span>
+        ${r.conf!=='ok'?`<button onclick="flagToOwner('${r.id}')" style="font-size:11px;color:var(--accent2);background:none;border:none;cursor:pointer;font-family:-apple-system,sans-serif;padding:0;">Pedir resposta da gestora →</button>`:''}
+      </div>
+    </div>`).join('') : '<div style="font-size:13px;color:var(--muted);padding:8px 0;">Nenhuma consulta ainda. Use o Assistente e avalie a resposta aqui.</div>';
+
+  flagged.innerHTML = fl.length ? fl.map(r=>`
+    <div style="background:var(--surface);border:1px solid rgba(0,122,255,.25);border-radius:var(--r);padding:12px 14px;">
+      <div style="font-size:11px;font-weight:600;color:var(--accent2);margin-bottom:4px;">Enviado para a gestora</div>
+      <div style="font-size:12px;font-weight:500;color:var(--ink);margin-bottom:4px;">${r.question}</div>
+      ${r.ownerNote?`<div style="margin-top:8px;padding:8px 10px;background:rgba(52,199,89,.06);border-radius:8px;border-left:2px solid #34C759;font-size:12px;color:var(--ink2);"><strong>Resposta da gestora:</strong> ${r.ownerNote}</div>`:'<div style="font-size:11px;color:var(--muted);margin-top:4px;">Aguardando resposta…</div>'}
+    </div>`).join('') : '<div style="font-size:13px;color:var(--muted);padding:8px 0;">Nenhum item enviado ainda.</div>';
+}
+
+function flagToOwner(id){
+  const r = EMP_REPORT.find(x=>x.id===id);
+  if(r){ r.flagged=true; renderEmpReport(); renderOwnerFlagged(); }
+}
+
+function renderOwnerFlagged(){
+  // Update owner incidents screen to show only flagged items
+  const el = document.getElementById('owner-flagged-feed');
+  if(!el) return;
+  const flagged = EMP_REPORT.filter(x=>x.flagged);
+  document.getElementById('inc-total').textContent = flagged.length;
+  document.getElementById('inc-unresolved').textContent = flagged.filter(x=>!x.ownerNote).length;
+  document.getElementById('inc-resolved').textContent = flagged.filter(x=>x.ownerNote).length;
+
+  el.innerHTML = flagged.length ? flagged.map(r=>`
+    <div style="background:var(--surface);border:1px solid ${r.ownerNote?'rgba(52,199,89,.25)':'rgba(255,107,53,.25)'};border-radius:var(--r);padding:13px;margin-bottom:8px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:#fff;">${empName[0]||'E'}</div>
+        <div>
+          <div style="font-size:13px;font-weight:600;color:var(--ink);">${empName} · pediu orientação</div>
+          <div style="font-size:11px;color:var(--muted);">A equipe não divulga o conteúdo das consultas — só os itens que precisam de você.</div>
+        </div>
+      </div>
+      <div style="background:var(--bg);border-radius:8px;padding:10px 12px;margin-bottom:10px;">
+        <div style="font-size:11px;font-weight:500;color:var(--muted);margin-bottom:4px;">SITUAÇÃO</div>
+        <div style="font-size:13px;color:var(--ink);">${r.question}</div>
+        <div style="margin-top:6px;font-size:12px;color:var(--muted);">O assistente respondeu mas ${empName} ainda ficou com dúvida.</div>
+      </div>
+      ${r.ownerNote
+        ? `<div style="padding:8px 10px;background:rgba(52,199,89,.06);border-radius:8px;border-left:2px solid #34C759;font-size:12px;color:var(--ink2);"><strong>Sua resposta:</strong> ${r.ownerNote}</div>`
+        : `<div>
+            <textarea id="on-${r.id}" class="f" rows="2" placeholder="Escreva sua orientação para ${empName}…" style="font-size:12px;margin-bottom:6px;"></textarea>
+            <button onclick="ownerReply('${r.id}')" class="btn-p" style="width:100%;font-size:12px;padding:10px;">Enviar orientação →</button>
+          </div>`
+      }
+    </div>`).join('') : '<div style="font-size:13px;color:var(--muted);padding:12px 0;">Nenhum item enviado pela equipe ainda.</div>';
+}
+
+function ownerReply(id){
+  const r = EMP_REPORT.find(x=>x.id===id);
+  const note = document.getElementById('on-'+id)?.value.trim();
+  if(r && note){ r.ownerNote=note; renderOwnerFlagged(); renderEmpReport(); }
+}
+// ── END REPORT SYSTEM ──────────────────────────────────────────
+
 async function sendChat(){
   const inp=document.getElementById('chat-in');
   const text=inp.value.trim();
@@ -3024,10 +2918,34 @@ async function sendChat(){
     const r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,system:getSystem(),messages:hist})});
     const d=await r.json();
     const reply=d.content?.[0]?.text||'Não consegui processar. Tenta de novo.';
-    t.remove();addMsg('bot',reply);
+    t.remove();
+    const msgEl = addMsg('bot',reply);
     hist.push({role:'assistant',content:reply});
+    // Add confidence rating for employee
+    if(role==='emp'){
+      const rid = 'r'+Date.now();
+      const rating = document.createElement('div');
+      rating.style.cssText='margin:4px 0 8px 0;display:flex;gap:6px;flex-wrap:wrap;';
+      rating.innerHTML=`
+        <div style="font-size:11px;color:var(--muted);width:100%;margin-bottom:4px;">Essa resposta resolveu sua dúvida?</div>
+        <button onclick="rateChat('${rid}','${text.replace(/'/g,"\\'")}','${reply.substring(0,80).replace(/'/g,"\\'")}','ok',this.parentElement)" style="font-size:11px;padding:5px 10px;border-radius:20px;border:1px solid rgba(52,199,89,.4);background:rgba(52,199,89,.06);color:#34C759;cursor:pointer;font-family:-apple-system,sans-serif;">✓ Resolveu</button>
+        <button onclick="rateChat('${rid}','${text.replace(/'/g,"\\'")}','${reply.substring(0,80).replace(/'/g,"\\'")}','unsure',this.parentElement)" style="font-size:11px;padding:5px 10px;border-radius:20px;border:1px solid rgba(255,149,0,.4);background:rgba(255,149,0,.06);color:#FF9500;cursor:pointer;font-family:-apple-system,sans-serif;">⚠ Ficou com dúvida</button>
+      `;
+      const msgs=document.getElementById('msgs');
+      msgs.appendChild(rating);
+      msgs.scrollTop=msgs.scrollHeight;
+    }
   }catch(e){t.remove();addMsg('bot','Erro de conexão. Tente novamente.');}
 }
+
+function rateChat(id, question, answer, conf, ratingEl){
+  EMP_REPORT.push({id, question, answer, conf, flagged:false, ownerNote:''});
+  ratingEl.innerHTML=`<div style="font-size:11px;color:var(--muted);padding:2px 0;">
+    ${conf==='ok'?'✓ Registrado como resolvido — visível só para você.':'⚠ Registrado — vá em Relatório para pedir orientação da gestora se precisar.'}
+  </div>`;
+  renderEmpReport();
+}
+
 function quickMsg(text){document.getElementById('chat-in').value=text;sendChat();}
 function addMsg(r,text){
   const msgs=document.getElementById('msgs');
